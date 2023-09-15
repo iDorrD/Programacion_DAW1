@@ -9,7 +9,7 @@ public class test {
         } else if (a<b) {
             System.out.println(a+" es menor que "+b);
         }else {
-            System.out.println("ES IGUAL");
+            System.out.println("ES IGUAAAL");
         }
     }
 }
