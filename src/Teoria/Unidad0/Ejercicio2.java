@@ -1,4 +1,4 @@
-package Unidad1;
+package Teoria.Unidad0;
 
 public class Ejercicio2 {
     public static void main(String[] args) {
@@ -14,5 +14,10 @@ public class Ejercicio2 {
         System.out.println("resultado: "+resultado2);
         // / · Realiza el cociente de la división
         // % · Realiza el resto de la división
+
+        // Es igual que hacer el IF ELSE:
+        // expresion=sentencia1:sentencia2
+        int numerador=5,cociente;
+        cociente=numerador==0?0:numerador/2;
     }
 }
