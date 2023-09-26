@@ -1,4 +1,4 @@
-package Teoria.Unidad1;
+package Teoria.tiposDatos.Unidad1;
 
 public class EjercicioExtra1 {
     public static void main(String[] args) {

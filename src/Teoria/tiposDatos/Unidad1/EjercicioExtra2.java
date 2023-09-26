@@ -1,8 +1,7 @@
-package Teoria.Unidad1;
+package Teoria.tiposDatos.Unidad1;
 
 public class EjercicioExtra2 {
     public static void main(String[] args) {
-        // Creamos las constantes de cada mes, indicando su número:
         final int ENERO = 1;
         final int FEBRERO = 2;
         final int MARZO = 3;
@@ -16,14 +15,13 @@ public class EjercicioExtra2 {
         final int NOVIEMBRE = 11;
         final int DICIEMBRE = 12;
 
-        // Creamos constantes de cada dato importante:
         final int SEGUNDOS_POR_MINUTO = 60;
         final int TAMANO_DE_COMPUTADORA_MB = 2048;
         final boolean VALOR_LOGICO_VERDADERO = true;
         final double RAZON_FAHRENHEIT_A_CELSIUS = 1.8;
         final double PRECIO_EN_EUROS = 3.8;
 
-        System.out.printf("%17s","MESES DEL AÑO\n");
+        System.out.printf("%18s","MESES DEL AÑO\n");
         System.out.println("Enero: " + ENERO);
         System.out.println("Febrero: " + FEBRERO);
         System.out.println("Marzo: " + MARZO);
