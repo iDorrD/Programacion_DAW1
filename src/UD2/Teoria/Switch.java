@@ -2,7 +2,7 @@ package UD2.Teoria;
 
 import java.util.Scanner;
 
-public class MesesDelAño {
+public class Switch {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
         System.out.println("Ingrese un número que represente un mes (1-4): ");
