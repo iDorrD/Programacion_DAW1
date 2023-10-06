@@ -7,12 +7,29 @@ public class Switch {
         Scanner teclado = new Scanner(System.in);
         System.out.println("Ingrese un número que represente un mes (1-4): ");
         int mes = teclado.nextInt();
+        String nombreMes;
         switch (mes){
-            case 1 -> System.out.println("Enero");
-            case 2 -> System.out.println("Febrero");
-            case 3 -> System.out.println("Marzo");
-            case 4 -> System.out.println("Abril");
-            default -> System.out.println("No es ninguno de los cuatro primeros meses.");
+            case 1:
+                nombreMes="Enero";
+                break;
+            case 2:
+                nombreMes="Febrero";
+                break;
+            case 3:
+                nombreMes="Marzo";
+                break;
+            case 4:
+                nombreMes="Abril";
+                break;
+            default:
+                nombreMes="no válido.";
+                break;
         }
+        if (mes<4||mes>0){
+            System.out.println("Mes: "+nombreMes);
+        }else {
+            System.out.println("Mes: no valido");
+        }
+
     }
 }
