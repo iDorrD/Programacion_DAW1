@@ -9,6 +9,5 @@ public class test {
         }else {
             System.out.println("Es igual");
         }
-
     }
 }

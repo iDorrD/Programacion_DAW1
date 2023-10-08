@@ -19,7 +19,7 @@ public class Ejercicio4 {
         } else if (tiempo.equalsIgnoreCase("sol")) {
             sol=true;
         }
-        // A
+
         if (temperaturaHoy>20&&lluvia){
             System.out.println("Hace calor pero está lloviendo.");
             System.out.println("Entre ayer y hoy la temperatura fue de: "+(temperaturaAyer+temperaturaHoy));
