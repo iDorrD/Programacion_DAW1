@@ -8,9 +8,9 @@ public class Ejercicio4 {
         boolean lluvia=false,sol=false;
         Scanner teclado = new Scanner(System.in);
         System.out.print("Introduce la temperatura de ayer: ");
-        int temperaturaAyer = teclado.nextInt();
+        int temperaturaAyer = teclado.nextInt() ;
         System.out.print("Introduce la temperatura de hoy: ");
-        int temperaturaHoy = teclado.nextInt();
+        int temperaturaHoy = teclado.nextInt() ;
         teclado.nextLine();
         System.out.println("¿Hoy lluve o hace sol? Escribe 'llueve' o 'sol'.");
         String tiempo = teclado.nextLine();
