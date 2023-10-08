@@ -17,7 +17,7 @@ public class Ejercicio4 {
         if (tiempo.equalsIgnoreCase("llueve")){
             lluvia=true;
         } else if (tiempo.equalsIgnoreCase("sol")) {
-            sol=true;
+            sol=true ;
         }
         // A
         if (temperaturaHoy>20&&lluvia){
