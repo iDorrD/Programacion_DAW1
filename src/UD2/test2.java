@@ -7,13 +7,12 @@ public class test2 {
         final int VALOR=3;
         Scanner teclado = new Scanner(System.in);
         int numero=0,total=0;
-        //int limite=0;
-        while (){
-            //System.out.println("Introduce el número "+(limite+1)+":");
-            System.out.print("Introduce un numero: ");
+        int limite=0;
+        while (limite<6){
+            System.out.print("Introduce el número "+(limite+1)+": ");
             numero= teclado.nextInt();
             total=total+numero;
-            //limite++;
+            limite++;
         }
         System.out.println("Suma total: "+total);
     }

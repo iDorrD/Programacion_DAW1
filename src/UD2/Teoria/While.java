@@ -7,9 +7,13 @@ public class While {
         Scanner teclado = new Scanner(System.in);
         System.out.println("Ingresa un número: ");
         int numero = teclado.nextInt();
-        while (numero >=1) {
+        while (numero >1) {
+            numero--;
+            System.out.println(numero);
+        }/*
+        while (numero>=1) {
             System.out.println(numero);
             numero--;
-        }
+        }*/
     }
 }

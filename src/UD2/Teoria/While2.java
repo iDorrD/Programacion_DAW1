@@ -17,8 +17,7 @@ public class While2 {
                 contador++;
             }
         }
-        System.out.println();
-        System.out.println("Cantidad de número ingresados: "+contador);
+        System.out.println("\nCantidad de número ingresados: "+contador);
         System.out.println("Suma total de los números: "+suma);
     }
 }
