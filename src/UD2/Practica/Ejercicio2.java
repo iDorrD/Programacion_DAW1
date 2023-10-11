@@ -9,12 +9,15 @@ public class Ejercicio2 {
         int edadPropia = teclado.nextInt();
         System.out.print("Escribe la edad de tu compañero: ");
         int edadCompa = teclado.nextInt();
+        if (edadPropia<0||edadCompa<0){
+            System.out.println("No son válidos. (Edad negativa)");
+        }else {
         if (edadPropia<edadCompa){
             System.out.println("Soy más joven que mi compañero.");
         }else if(edadPropia>edadCompa) {
             System.out.println("Mi compañero es más joven que yo");
-        } else if (edadPropia==edadCompa) {
+        } else {
             System.out.println("Somos de la misma edad.");
-        }
+        }}
     }
 }
