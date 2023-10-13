@@ -4,13 +4,13 @@ import java.util.Scanner;
 
 public class test2 {
     public static void main(String[] args) {
-        final int VALOR=3;
+        final int VALOR=6;
         Scanner teclado = new Scanner(System.in);
-        int numero=0,total=0;
-        int limite=0;
-        while (limite<6){
+        int total=0;
+        int limite=0; // Indica el número de sumandos
+        while (limite<VALOR){
             System.out.print("Introduce el número "+(limite+1)+": ");
-            numero= teclado.nextInt();
+            int numero= teclado.nextInt();
             total=total+numero;
             limite++;
         }
