@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class DoWhile {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
-        int numero=0;
+        int numero;
         do {
             System.out.println("Introduce un numero del 1 al 10: ");
             numero = teclado.nextInt();
