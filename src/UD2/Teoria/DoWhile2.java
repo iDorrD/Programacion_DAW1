@@ -7,13 +7,13 @@ public class DoWhile2 {
     public static void main(String[] args) {
         final int NUMEROS_NATURALES=4; // Número de multiplicadores
         Scanner teclado = new Scanner(System.in);
-        int numero=0,multiplicacion=1,contador=0;
+        int numero=1,multiplicacion=1,contador=0;
+        // No hacia falta meter por teclado el número
         do {
-            System.out.println("Introduce un número: ");
-            numero= teclado.nextInt();
+            numero++;
             multiplicacion=multiplicacion*numero;
             contador++;
-        }while (contador!=NUMEROS_NATURALES);
+        }while (contador<NUMEROS_NATURALES); // Indicamos que pare en el valor 4
         System.out.println("Resultado: "+multiplicacion);
     }
 }

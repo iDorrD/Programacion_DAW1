@@ -7,10 +7,10 @@ public class DoWhile_Clase {
         Scanner teclado = new Scanner(System.in);
         int numero;
         // Se hace un bucle hasta que introduzcamos un valor de 1 a 10
-        do {
-            System.out.print("Introduce un número entre 1 y 10: ");
-            numero= teclado.nextInt();
-        }while (numero<1||numero>10);
-        System.out.println("El número es: "+numero);
+        for (int i=1;i<3;i++){
+            for (int j=0;j<2;j++){
+                System.out.println(i+" "+j);
+            }
+        }
     }
 }
