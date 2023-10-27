@@ -7,13 +7,17 @@ public class Ejercicio1 {
         Scanner teclado = new Scanner(System.in);
         System.out.print("Ingresa la cantidad de piezas a procesar: ");
         int piezas= teclado.nextInt();
+        int piezasAptas=0;
+        double longitud=0;
 
-        double longitud_perfil;
-        do {
-            System.out.print("ingrese la longitud de cada perfil: ");
-            longitud_perfil= teclado.nextDouble();
-        }while (longitud_perfil<1.20||longitud_perfil>1.30);
+        for (int i=1;i<=piezas;i++){
+            System.out.print("Ingrese la longitud del perfil "+i+" (metros): ");
+            longitud= teclado.nextDouble();
+            if (longitud>=1.20&&longitud<=1.30){
+                piezasAptas++;
+            }
+        }
 
-        System.out.println("Hay "+piezas+" con "+longitud_perfil);
+        System.out.println("Hay "+piezasAptas+" piezas aptas.");
     }
 }

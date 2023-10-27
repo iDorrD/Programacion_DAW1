@@ -21,7 +21,7 @@ public class Test4 {
         } while (contador<VALOR);
         System.out.println("El resultado de la multiplicación es: "+resultado);
         int suma = 0;
-        contador = 0; // Se reinicia el contador
+        contador = 0; // Se reinicia el contador a 0 para que vaya contando sus valores de nuevo en el do-while
         do {
             suma=suma+resultado;
             contador++;
