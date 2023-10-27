@@ -4,6 +4,9 @@ import java.util.Scanner;
 
 public class Ejercicio1 {
     public static void main(String[] args) {
+        final double MIN=1.20;
+        final double MAX=1.30;
+
         Scanner teclado = new Scanner(System.in);
         System.out.print("Ingresa la cantidad de piezas a procesar: ");
         int piezas= teclado.nextInt();
@@ -13,7 +16,7 @@ public class Ejercicio1 {
         for (int i=1;i<=piezas;i++){
             System.out.print("Ingrese la longitud del perfil "+i+" (metros): ");
             longitud= teclado.nextDouble();
-            if (longitud>=1.20&&longitud<=1.30){
+            if (longitud>=MIN&&longitud<=MAX){
                 piezasAptas++;
             }
         }
