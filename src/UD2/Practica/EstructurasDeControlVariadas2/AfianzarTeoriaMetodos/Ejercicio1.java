@@ -3,10 +3,13 @@ package UD2.Practica.EstructurasDeControlVariadas2.AfianzarTeoriaMetodos;
 import java.util.Scanner;
 
 public class Ejercicio1 {
+
+    // Constantes estáticos y para llamar a correspondientes clases.
     static Scanner teclado = new Scanner(System.in);
     static final double MIN=1.20;
     static final double MAX=1.30;
 
+    // Interfaz. Controla el final del programa y llamará a métodos.
     public static void main(String[] args) {
         int contador=1;
         int piezas= ingresarNumero();
@@ -19,6 +22,7 @@ public class Ejercicio1 {
         imprimir(piezasAptas);
     }
 
+    //
     public static int ingresarNumero(){
         System.out.print("Ingresa la cantidad de piezas a procesar: ");
         return teclado.nextInt();
