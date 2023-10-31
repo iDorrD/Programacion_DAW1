@@ -3,18 +3,29 @@ package UD2.Teoria.Metodos;
 import java.util.Scanner;
 
 public class Practica1 {
+    static Scanner teclado = new Scanner(System.in);
     public static void main(String[] args) {
-        Scanner teclado = new Scanner(System.in);
-        System.out.print("Meter número: ");
-        int operador1= teclado.nextInt();
-        System.out.print("Meter número: ");
-        int operador2= teclado.nextInt();
-        sacarResultado(operador1,operador2);
+        int operador1=meterNumero();
+        int operador2=meterNumero();
+        int suma=sumarNumeros(operador1,operador2);
+        sacarResultado(operador1,operador2,suma);
+    }
+
+    public static int sumarNumeros(int num1,int num2){
+        return num1+num2;
     }
 
     // Crear sacarResultado()
-    public static void sacarResultado(int n1,int n2){
-        System.out.println("La suma de "+n1+"+"+n2+" es: "+(n1+n2));
+    public static void sacarResultado(int n1,int n2,int suma){
+        System.out.println("La suma de "+n1+"+"+n2+" es: "+suma);
+    }
+
+    // Crear meterNumeros, se crearon 2 métodos.
+    public static int meterNumero(){
+        int operador;
+        System.out.print("Mete operador 1: ");
+        operador=teclado.nextInt();
+        return operador;
     }
 
 
