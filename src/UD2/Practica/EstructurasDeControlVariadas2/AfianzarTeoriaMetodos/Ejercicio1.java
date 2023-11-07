@@ -13,16 +13,22 @@ public class Ejercicio1 {
     public static void main(String[] args) {
         int contador=1;
         int piezas= ingresarNumero();
+        System.out.println(piezas);
+        boolean apto=false;
         int piezasAptas=0;
         for (int i = 0; i < piezas; i++) {
+            /* [Opcional] *///System.out.print("Ingrese la longitud del perfil "+contador+" (metros): ");
             double longitud = ingresarLongitud(contador);
-            piezasAptas=piezasAptas+comprobarAptas(longitud);
+            apto=comprobarAptas(longitud);
+            if (apto){
+                piezasAptas++;
+            }
             contador++;
         }
         imprimir(piezasAptas);
     }
 
-    //
+    // Este método ingres el número de cantidades a procesar
     public static int ingresarNumero(){
         System.out.print("Ingresa la cantidad de piezas a procesar: ");
         return teclado.nextInt();
@@ -33,12 +39,13 @@ public class Ejercicio1 {
         return teclado.nextDouble();
     }
 
-    public static int comprobarAptas(double longitud){
-        int resultado=0;
+    public static boolean comprobarAptas(double longitud){
         if (longitud>=MIN&&longitud<=MAX){
-            resultado=1;
+            return true;
+        }else {
+            return false;
         }
-        return resultado;
+
     }
 
     public static void imprimir(int piezasAptas){
