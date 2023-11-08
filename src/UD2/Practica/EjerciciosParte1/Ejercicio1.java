@@ -1,4 +1,4 @@
-package UD2.Teoria.Metodos.EjerciciosParte1;
+package UD2.Practica.EjerciciosParte1;
 
 import java.util.Scanner;
 
@@ -14,14 +14,15 @@ public class Ejercicio1 {
             System.out.println("\nEuros introducidos: "+euros+"€");
             do {
                 moneda=introducirMoneda();
+                if (!(moneda.equalsIgnoreCase("libras")||moneda.equalsIgnoreCase("dolares")||moneda.equalsIgnoreCase("yenes")||(moneda.equalsIgnoreCase("fin")))){
+                    System.out.println("\n[ERROR] Introduce una moneda válida o escribe 'Fin' para finalizar.\n");
+                }
             }while (!(moneda.equalsIgnoreCase("libras")||moneda.equalsIgnoreCase("dolares")||moneda.equalsIgnoreCase("yenes")||moneda.equalsIgnoreCase("fin")));
             if (!moneda.equalsIgnoreCase("fin")){
                 resultado=cambiarMoneda(moneda,euros);
                 imprimir(euros,resultado,moneda);
             }
         }while (!moneda.equalsIgnoreCase("fin"));
-
-
     }
 
     // Introducimos la cantidad de euros
@@ -36,23 +37,34 @@ public class Ejercicio1 {
         return teclado.next();
     }
     public static double cambiarMoneda(String tipoMoneda,double euros){
-        // Libras
-        if (tipoMoneda.equalsIgnoreCase("libras")){
-            euros=euros*LIBRAS;
-        }
-        // Dolares
-        else if (tipoMoneda.equalsIgnoreCase("dolares")){
-            euros=euros*DOLARES;
-        }
-        // Yenes
-        else {
-            euros=euros*YENES;
+        switch (tipoMoneda){
+            case "libras":
+                euros=euros*LIBRAS;
+                break;
+            case "dolares":
+                euros*=DOLARES;
+                break;
+            case "yenes":
+                euros*=YENES;
+                break;
         }
         return euros;
     }
 
     public static void imprimir(double euros,double resultado,String moneda){
-        System.out.println("Has ingresado: "+euros+"€\n >>> "+moneda+" >>>\nResultado: "+resultado);
+        String formato=null;
+        switch (moneda){
+            case "libras":
+                formato="£";
+                break;
+            case "dolares":
+                formato="$";
+                break;
+            case "yenes":
+                formato="¥";
+                break;
+        }
+        System.out.println("Resultado: "+String.format("%.2f",resultado)+formato);
     }
 
 }

@@ -1,4 +1,4 @@
-package UD2.Teoria.Metodos.EjerciciosParte1;
+package UD2.Practica.EjerciciosParte1;
 
 import java.util.Scanner;
 
@@ -15,7 +15,7 @@ public class Ejercicio2 {
         return teclado.nextDouble();
     }
     public static double calcularPrecio(double precio){
-        return precio*1.21;
+        return precio+(precio*IVA/100);
     }
     public static void imprimir(double precio,double resultado){
         System.out.println("El precio "+precio+"€ con IVA ("+IVA+"%) son: "+String.format("%.2f",resultado)+"€");

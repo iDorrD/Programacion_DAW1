@@ -20,6 +20,5 @@ public class Ejercicio2 {
                 System.out.println("¡Es menor que 8! El triple de "+numero+" es "+(numero*TRIPLE));
             }
         }while (numero!=0);
-
     }
 }
