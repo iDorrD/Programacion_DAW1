@@ -9,9 +9,8 @@ public class Ejercicio1 {
         double euros=0;
         String moneda=null;
         double resultado;
-        euros=introducirEuros();
         do {
-            System.out.println("\nEuros introducidos: "+euros+"€");
+            euros=introducirEuros();
             do {
                 moneda=introducirMoneda();
                 if (!(moneda.equalsIgnoreCase("libras")||moneda.equalsIgnoreCase("dolares")||moneda.equalsIgnoreCase("yenes")||(moneda.equalsIgnoreCase("fin")))){
@@ -20,7 +19,7 @@ public class Ejercicio1 {
             }while (!(moneda.equalsIgnoreCase("libras")||moneda.equalsIgnoreCase("dolares")||moneda.equalsIgnoreCase("yenes")||moneda.equalsIgnoreCase("fin")));
             if (!moneda.equalsIgnoreCase("fin")){
                 resultado=cambiarMoneda(moneda,euros);
-                imprimir(euros,resultado,moneda);
+                imprimir(resultado);
             }
         }while (!moneda.equalsIgnoreCase("fin"));
     }
@@ -36,6 +35,8 @@ public class Ejercicio1 {
         System.out.print("Ingresa la moneda (Escribe 'Fin' para salir):\n [Libras] [Dolares] [Yenes]\n > ");
         return teclado.next();
     }
+
+    // Convierte los euros introducidos, a la moneda concretamente.
     public static double cambiarMoneda(String tipoMoneda,double euros){
         switch (tipoMoneda){
             case "libras":
@@ -51,20 +52,8 @@ public class Ejercicio1 {
         return euros;
     }
 
-    public static void imprimir(double euros,double resultado,String moneda){
-        String formato=null;
-        switch (moneda){
-            case "libras":
-                formato="£";
-                break;
-            case "dolares":
-                formato="$";
-                break;
-            case "yenes":
-                formato="¥";
-                break;
-        }
-        System.out.println("Resultado: "+String.format("%.2f",resultado)+formato);
+    // Imprime el resultado, además de acompañarlo con su correcto símbolo de economía
+    public static void imprimir(double resultado){
+        System.out.println("\nResultado: "+String.format("%.2f",resultado));
     }
-
 }
