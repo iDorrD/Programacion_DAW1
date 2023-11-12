@@ -4,10 +4,12 @@ import java.util.Scanner;
 
 public class Ejercicio1 {
     static Scanner teclado = new Scanner(System.in);
+    // Realiza la llamada a los métodos
     public static void main(String[] args) {
         int numero=meterPosicion();
         calcularNumero(numero);
     }
+    // Introduce un valor, y el programa valida si es superior a 0
     public static int meterPosicion(){
         int numero=0;
         do {
@@ -16,6 +18,7 @@ public class Ejercicio1 {
         }while (numero<=0);
         return numero;
     }
+    // Se declaran 2 variables locales en el método, y se va incremementando, hasta que el valor sea igual del incrementado.
     public static void calcularNumero(int numero){
         // Numero = Posición
         int numeroA=0,numeroB=1;
