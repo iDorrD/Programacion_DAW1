@@ -22,11 +22,17 @@ public class Ejercicio1 {
     public static void calcularNumero(int numero){
         // Numero = Posición
         int numeroA=0,numeroB=1;
-        for (int i=0;i<numero;i++){
-            int numeroC=numeroA+numeroB;
-            numeroA=numeroB;
-            numeroB=numeroC;
+        if(numero==1){
+            System.out.println("La posición "+numero+" de la serie es 0");
+        }else if(numero==2){
+            System.out.println("La posición "+numero+" de la serie es 1");
+        }else {
+            for (int i=0;i<numero;i++){
+                int numeroC=numeroA+numeroB;
+                numeroA=numeroB;
+                numeroB=numeroC;
+            }
+            System.out.println("La posición "+numero+" de la serie es "+numeroB);
         }
-        System.out.println("La posición "+numero+" de la serie es "+numeroB);
     }
 }

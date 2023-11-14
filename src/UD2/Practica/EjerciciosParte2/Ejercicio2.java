@@ -18,10 +18,16 @@ public class Ejercicio2 {
     // Escribir un número valido de 4 digitos.
     public static int leerEntero(){
         int numero;
+        boolean valido;
         do {
-            System.out.print("\nIntroduce un valor de 4 dígitos (Escribe '0' para salir): ");
+            System.out.print("Introduce un valor de 4 dígitos (Escribe '0' para salir): ");
             numero= teclado.nextInt();
-        }while (numero<0||(numero>9999));
+            valido=(numero==0);
+            if (!(valido)&&(numero<1000)||(numero>9999)){
+                System.out.println("[ERROR] ¡Tiene que ser un valor de 4 dígitos!");
+            }
+            System.out.println();
+        }while (!(valido)&&(numero<1000)||(numero>9999));
         return numero;
     }
 
@@ -38,14 +44,16 @@ public class Ejercicio2 {
     // Busca y determina el dígito impar, y devuelve un número; si retorna el valor 0,
     // indica que no hay ningún impar. En caso de encontrar un número, indicará retornando otro valor distinto de 0.
     public static int determinarParImpar(int numero){
-        int incorrecto=0;
-        while (numero>0){
-            int digito=numero%10;
-            if (digito%2!=0){
-                incorrecto=digito;
+        int incorrecto=0; // Si devuelve el valor 0, es que no hay ningún impar.
+        while (numero>0){ // Pasa por un bucle, hasta revisar los 4 dígitos. (En este caso)
+            int digito=numero%10; // Realiza la operación, para sacer si es impar.
+            if (digito%2!=0){ // Entra en este IF si detecta algún impar
+                incorrecto=digito; // Cuando lo encuentre, en el valor 'incorrecto' se pondrá el dígito que es impar.
             }
             numero=numero/10;
         }
-        return incorrecto;
+        return incorrecto; // Retorna el valor o el digito incorrecto.
     }
+    // Eso sí, devuelve el primer dígito que encuentre. Si hay más impares, los ignora.
+
 }
