@@ -8,7 +8,7 @@ public class Ejercicio2 {
         int numero1=meterNumero();
         int numero2=meterNumero();
         int resultado=obtenerProducto(numero1,numero2);
-        imprimir(resultado);
+        imprimir(numero1,numero2,resultado);
     }
 
     public static int meterNumero(){
@@ -24,10 +24,14 @@ public class Ejercicio2 {
     }
 
     public static int obtenerProducto(int numero1,int numero2){
-        return numero1/numero2;
+        int producto=0;
+        for (int i=0;i<numero2;i++){
+            producto=producto+numero1;
+        }
+        return producto;
     }
 
-    public static void imprimir(int resultado){
-        System.out.print("Resultado: "+resultado);
+    public static void imprimir(int numero1,int numero2, int resultado){
+        System.out.print("El "+numero1+" con "+numero2+" su producto es "+resultado);
     }
 }
