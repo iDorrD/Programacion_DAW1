@@ -1,6 +1,6 @@
 package UD2.Practica.EjerciciosParte2;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class Ejercicio2 {
     static Scanner teclado = new Scanner(System.in);
@@ -12,7 +12,6 @@ public class Ejercicio2 {
                 comprobarNumero(numero);
             }
         }while (numero!=0);
-
     }
 
     // Escribir un número valido de 4 digitos.
