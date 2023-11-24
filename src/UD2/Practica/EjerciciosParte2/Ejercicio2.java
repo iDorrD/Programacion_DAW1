@@ -1,7 +1,5 @@
 package UD2.Practica.EjerciciosParte2;
-
 import java.util.*;
-
 public class Ejercicio2 {
     static Scanner teclado = new Scanner(System.in);
     public static void main(String[] args) {
