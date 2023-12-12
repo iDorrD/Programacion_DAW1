@@ -1,24 +1,30 @@
 package UD3.Practica.Ejercicio1;
 
+import java.util.Scanner;
+
+/**
+ * Es un objeto de empleado, que nos interesa su nombre, apellido, edad y salario
+ * @author Cristian
+ */
+
 public class Empleado {
+    static Scanner teclado = new Scanner(System.in);
     private String nombre;
     private String apellido;
     private int edad;
     private double salario;
 
-    // Empleado · Carga 4 atributos con nombre, apellidos, edad y salario.
+    // Es un constructor de 4 parámetros, que se les dá valor según su correspondientes variables de la clase Principal.
     public Empleado(String nombre, String apellido, int edad, double salario) {
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.edad = edad;
-        this.salario = salario;
+        setNombre(nombre);
+        setApellido(apellido);
+        setEdad(edad);
+        setSalario(salario);
     }
 
+    // Es un constructor que dá los valores por defecto
     public Empleado(){
-        setNombre("Agustín");
-        setApellido("Alvarado");
-        setEdad(60);
-        setSalario(1500);
+        this(null,null,0,0.0);
     }
 
     public String getNombre() {
@@ -26,7 +32,11 @@ public class Empleado {
     }
 
     public void setNombre(String nombre) {
-        this.nombre = nombre;
+        if (nombre!=null&&(nombre.matches("[a-zA-Z]+"))){
+            this.nombre=nombre;
+        }else {
+            this.nombre=null;
+        }
     }
 
     public String getApellido() {
@@ -42,7 +52,12 @@ public class Empleado {
     }
 
     public void setEdad(int edad) {
-        this.edad = edad;
+        if (edad>0){
+            this.edad = edad;
+        }else {
+            edad=0;
+        }
+
     }
 
     public double getSalario() {
@@ -50,16 +65,17 @@ public class Empleado {
     }
 
     public void setSalario(double salario) {
-        this.salario = salario;
+        this.salario = Math.abs(salario);
     }
 
+    // El método incremenarSalario incrementa según la edad del empleado
     public void incrementarSalario(){
         if (getEdad()>=18&&getEdad()<=30){
-            salario+=100;
+            setSalario(salario+100);
         } else if (getEdad()>=31&&getEdad()<=50) {
-            salario+=150;
+            setSalario(salario+150);
         }else if (getEdad()>50){
-            salario+=200;
+            setSalario(salario+200);
         }
     }
 

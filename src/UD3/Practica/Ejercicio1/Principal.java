@@ -3,18 +3,19 @@ package UD3.Practica.Ejercicio1;
 import java.util.Scanner;
 
 public class Principal {
-    private Empleado emp1;
-    private Empleado emp2;
+    Empleado emp1; // Es un puntero, y el único punto que puede recoger es la direccion de memoria
+    Empleado emp2;
     static Scanner teclado = new Scanner(System.in);
     public Principal(){
         emp1=crearEmpleado();
         emp1.incrementarSalario();
-        emp2=new Empleado();
+        emp2=new Empleado("Agustin","Alvarado",60,1500);
         emp2.incrementarSalario();
         System.out.println(emp1.toString()+"\n"+emp2.toString());
     }
 
-    public static Empleado crearEmpleado(){
+    // Este método crea un empleado
+    public Empleado crearEmpleado(){
         System.out.print("Escribe el nombre del empleado: ");
         String nombre = teclado.nextLine();
         System.out.print("Escribe el apellido: ");
