@@ -7,11 +7,11 @@ public class Principal {
     public Principal(){
         System.out.print("Introduce las existencias: ");
         int existencias= teclado.nextInt();
-        MaquinaExpendedora maquinaExpendedora = new MaquinaExpendedora(existencias);
+        MaquinaExpendedora maquinaExpendedora = new MaquinaExpendedora("Pañuelos de papel",5,0.90);
         while (true){
-            maquinaExpendedora.setMonedero(maquinaExpendedora.tragarMoneda());
+            maquinaExpendedora.tragarMoneda();
             maquinaExpendedora.vender();
-            maquinaExpendedora.setMonedero(maquinaExpendedora.devolverMonedas());
+            maquinaExpendedora.devolverMonedas();
             System.out.println(maquinaExpendedora.toString());
         }
 

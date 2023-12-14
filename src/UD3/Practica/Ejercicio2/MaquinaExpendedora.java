@@ -10,12 +10,12 @@ public class MaquinaExpendedora {
     private double precio;
     private double gananciasAcumuladas; // Cajetin donde se va acumulando el dinero de los paquetes adquiridos
 
-    public MaquinaExpendedora(int existencias) {
-        setProducto("Pañuelos de papel");
-        setMonedero(tragarMoneda());
+    public MaquinaExpendedora(String producto, int existencias, double precio) {
+        setProducto(producto);
         setExistencias(existencias);
-        setPrecio(0.9);
-        setGananciasAcumuladas(getMonedero());
+        setPrecio(precio);
+        setMonedero(0);
+        setGananciasAcumuladas(0);
     }
 
     public String getProducto() {
@@ -58,7 +58,7 @@ public class MaquinaExpendedora {
         this.gananciasAcumuladas = gananciasAcumuladas;
     }
 
-    public double tragarMoneda(){
+    public void tragarMoneda(){
         int monedas=0;
         while (getMonedero()<getPrecio()){
             do {
@@ -79,12 +79,18 @@ public class MaquinaExpendedora {
             }
             System.out.println("Dinero acumulado: "+getMonedero()+"\nTe falta: "+(getPrecio()-getMonedero()));
         }
-        return getMonedero();
     }
 
     public void vender(){
-        setExistencias(getExistencias()-1);
-        setGananciasAcumuladas(getMonedero());
+        if (getMonedero()>=getPrecio()){
+            setExistencias(getExistencias()-1);
+            gananciasAcumuladas+=precio;
+            System.out.println("Compra realizada correctamente. Devolución: " + getMonedero() + " céntimos.");
+        }else {
+            System.out.println("No tienes suficiente dinero.");
+        }
+
+
     }
 
     public double devolverMonedas(){ // Devuelve la vuelta del dinero
@@ -93,12 +99,6 @@ public class MaquinaExpendedora {
 
     @Override
     public String toString() {
-        return "MaquinaExpendedora{" +
-                "producto='" + getProducto() + '\'' +
-                ", monedero=" + getMonedero() +
-                ", existencias=" + getExistencias() +
-                ", precio=" + getPrecio() +
-                ", gananciasAcumuladas=" + getGananciasAcumuladas() +
-                '}';
+        return "La máquina expendedora que tiene "+getProducto()+" con "+getExistencias()+" existencias, a un precio de "+getPrecio()+"€";
     }
 }
